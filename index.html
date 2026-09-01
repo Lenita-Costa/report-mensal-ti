@@ -67,6 +67,13 @@
   .att span{color:#AEB8CC}
   .rumo{background:linear-gradient(120deg,rgba(2,37,235,.12),rgba(0,32,96,.2));border:1px solid var(--line);border-radius:12px;padding:18px 20px;font-size:14.5px;color:#D3DBEA}
   footer{color:var(--gray);font-size:12px;text-align:center;margin-top:26px;font-family:var(--mono);line-height:1.7}
+.metric .meta{font-family:var(--mono);font-size:10px;color:var(--gray);font-weight:400;margin-left:6px}
+  .metric .rate{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--cyan)}
+  .bar.bsla{background:linear-gradient(90deg,var(--cyan),#00b3d6);color:#00252b}
+  .dotred{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);margin-right:5px;vertical-align:middle}
+  .method{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gray);border-radius:10px;padding:14px 18px;margin-top:14px;font-size:12.5px;color:#AEB8CC;line-height:1.6}
+  .method b{color:#D3DBEA}
+  .method code{font-family:var(--mono);font-size:11px;color:var(--cyan)}
   @media(max-width:820px){.kpis{grid-template-columns:repeat(2,1fr)}.evo,.cols{grid-template-columns:1fr}}
 </style>
 </head>
@@ -100,12 +107,14 @@
         <div class="track"><div class="bar b16" style="width:42%">S16 · 27</div><div class="bar b17" style="width:58%">S17 · 37</div></div>
       </div>
       <div class="metric">
-        <div class="top"><span class="name">SLA · resolução no prazo</span><span class="delta up">▲ +13 p.p.</span></div>
-        <div class="track"><div class="bar b16" style="width:46%">S16 · 78%</div><div class="bar b17" style="width:54%">S17 · 91%</div></div>
+        <div class="top"><span class="name">SLA · resolução no prazo</span><span class="delta up">▲ +20 p.p.</span></div>
+        <div class="track"><div class="bar b16" style="width:44%">S16 · 72%</div><div class="bar b17" style="width:56%">S17 · 92%</div></div>
+        <div class="lbl"><span>13 de 18 concluídos</span><span>12 de 13 concluídos</span></div>
       </div>
       <div class="metric">
-        <div class="top"><span class="name">SLA · 1ª resposta no prazo</span><span class="delta up">▲ +9 p.p.</span></div>
-        <div class="track"><div class="bar b16" style="width:48%">S16 · 91%</div><div class="bar b17" style="width:52%">S17 · 100%</div></div>
+        <div class="top"><span class="name">SLA · 1ª resposta no prazo</span><span class="delta up">▲ +5 p.p.</span></div>
+        <div class="track"><div class="bar b16" style="width:49%">S16 · 95%</div><div class="bar b17" style="width:51%">S17 · 100%</div></div>
+        <div class="lbl"><span>21 de 22 chamados</span><span>19 de 19 chamados</span></div>
       </div>
     </div>
     <div class="card" style="display:flex;flex-direction:column;justify-content:center">
@@ -115,6 +124,42 @@
       </div>
       <div class="takeaway">Crescer <b>volume e qualidade juntos</b> é sinal de maturidade operacional, não de esforço pontual.</div>
     </div>
+  </div>
+
+  <h2>SLA por frente — de onde vem o número</h2>
+  <div class="card">
+    <div class="metric">
+      <div class="top"><span class="name">Solicitação de TI<span class="meta">meta 4h / 24h</span></span><span class="rate">85,7%</span></div>
+      <div class="track"><div class="bar bsla" style="width:85.7%">18 de 21 concluídos no prazo</div></div>
+      <div class="lbl"><span>25 recebidos · 21 concluídos · 4 em aberto</span><span>1ª resposta 100%</span></div>
+    </div>
+    <div class="metric">
+      <div class="top"><span class="name">Solicitação — Comunicação Digital<span class="meta">meta 4h / 56h</span></span><span class="rate">75,0%</span></div>
+      <div class="track"><div class="bar bsla" style="width:75%">6 de 8 concluídos no prazo</div></div>
+      <div class="lbl"><span>15 recebidos · 8 concluídos · 7 em aberto</span><span>1ª resposta 92,9%</span></div>
+    </div>
+    <div class="metric">
+      <div class="top"><span class="name">Reportar incidente<span class="meta">meta 4h / 24h</span></span><span class="rate">75,0%</span></div>
+      <div class="track"><div class="bar bsla" style="width:75%">3 de 4 concluídos no prazo</div></div>
+      <div class="lbl"><span>5 recebidos · 4 concluídos · 1 em aberto</span><span>1ª resposta 100%</span></div>
+    </div>
+    <div class="takeaway" style="background:rgba(2,255,255,.06);border-color:rgba(2,255,255,.25);color:#CFE6EA">
+      No mês: <b style="color:var(--cyan)">81,8%</b> de resolução no prazo (27 de 33 concluídos) e <b style="color:var(--cyan)">97,7%</b> de 1ª resposta.
+      A 1ª resposta está sob controle em todas as frentes; a diferença está na <b style="color:var(--cyan)">resolução</b>.
+      <span class="dotred"></span>Os 6 estouros do mês se concentram em <b>Comunicação Digital</b>, onde 7 dos 15 chamados seguem em aberto por dependerem de conteúdo e definições das áreas — o mesmo gargalo já apontado no bloco de atenção.
+    </div>
+  </div>
+
+  <div class="method">
+    <b>Como o SLA é apurado.</b> Lido direto dos campos oficiais do Jira Service Management
+    (<code>customfield_10577</code> 1ª resposta e <code>customfield_10610</code> resolução), em horário comercial, sem cálculo manual.
+    A base é a <b>coorte do mês</b>: os 45 chamados abertos entre 01 e 31/08 — 42 deles dentro das janelas das duas sprints.
+    O percentual de resolução considera apenas os <b>33 já concluídos</b>; os 12 em aberto aparecem declarados em cada frente, não diluídos no índice.
+    As metas por frente são as réguas configuradas no próprio JSM. Frente = trilha de atendimento do Service Desk.
+    <br><br>
+    <b>Revisão do fechamento anterior.</b> A evolução S16→S17 foi recalculada nesta mesma régua. A leitura anterior
+    (78% → 91%) comparava bases diferentes: o S16 vinha dos chamados <i>resolvidos</i> na janela e o S17 da <i>coorte</i> da sprint.
+    Na base única, o S16 fica em 72% e o ganho real do mês é de <b>+20 p.p.</b>, não +13 p.p.
   </div>
 
   <h2>Marcos que movem o ponteiro</h2>
@@ -152,7 +197,7 @@
 
   <footer>
     Este panorama consolida o mês para a visão de diretoria. Os relatórios quinzenais por sprint seguem por e-mail, com o detalhamento operacional.<br>
-    Números apurados no board das sprints (Jira) e no campo oficial de SLA do Service Desk · Coordenação de TI · Fenasbac
+    Números apurados no board das sprints (Jira) e nos campos oficiais de SLA do Service Desk (JSM), coorte de 01 a 31/08/2026 · Coordenação de TI · Fenasbac
   </footer>
 </div>
 </body>
