@@ -29,10 +29,13 @@ agosto-2026/
 ### Revisões
 
 - **01/09/2026 — Agosto/2026.** Incluída a apuração de SLA por frente (trilhas do
-  Service Desk) e recalculada a evolução S16→S17 na base coorte: resolução
-  72% → 92% (+20 p.p.) e 1ª resposta 95% → 100% (+5 p.p.). A primeira versão
-  enviada por e-mail trazia 78% → 91% (+13 p.p.), comparando bases distintas.
-  Painel e documento estão alinhados na régua atual.
+  Service Desk) e unificada a régua de SLA. Base: coorte do período, régua global
+  do JSM, e veredito por chamado entre *no prazo*, *estouro* e *em curso* — um
+  chamado que venceu a meta e segue aberto conta como estouro. Nessa régua:
+  resolução 59% → 80% (+21 p.p.) e 1ª resposta 91% → 100% (+9 p.p.).
+  A versão enviada por e-mail trazia 78% → 91% (+13 p.p.), comparando bases
+  distintas e sem contar os vencidos ainda abertos. Painel, documento e os
+  dashboards das sprints S16/S17 estão alinhados na régua atual.
 
 ## Como adicionar um novo mês
 
