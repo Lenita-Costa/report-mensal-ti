@@ -26,6 +26,14 @@ agosto-2026/
 |---|---|---|---|
 | Agosto/2026 | S16 · S17 (04/08 a 31/08) | [painel](agosto-2026/painel-estrategico-ti-agosto-2026.html) | [.docx](agosto-2026/Report_Mensal_TI_Agosto_2026.docx) |
 
+### Revisões
+
+- **01/09/2026 — Agosto/2026.** Incluída a apuração de SLA por frente (trilhas do
+  Service Desk) e recalculada a evolução S16→S17 na base coorte: resolução
+  72% → 92% (+20 p.p.) e 1ª resposta 95% → 100% (+5 p.p.). A primeira versão
+  enviada por e-mail trazia 78% → 91% (+13 p.p.), comparando bases distintas.
+  Painel e documento estão alinhados na régua atual.
+
 ## Como adicionar um novo mês
 
 1. Criar a pasta do mês (ex.: `setembro-2026/`) com o painel e o `.docx`.
